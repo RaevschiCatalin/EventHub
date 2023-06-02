@@ -166,6 +166,10 @@ body {
 
 .burger {
   display: none;
+  position: absolute;
+  right: 0;
+  padding-right: 2rem;
+  align-items: center;
 }
 
 .menu-icon,
@@ -194,13 +198,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    justify-content: flex-start;
+  .navbar.responsive {
+    justify-content: space-between;
   }
+  
 
   .burger {
     display: flex;
     align-items: center;
+    margin-left: auto;
     cursor: pointer;
     margin-right: 1rem;
   }
@@ -221,5 +227,23 @@ body {
 
   .close-icon {
     display: none;
+  }
+
+  .menu-icon,
+.close-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+  .responsive .nav-links {
+    display: flex;
+  }
+  .header-text {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
 }

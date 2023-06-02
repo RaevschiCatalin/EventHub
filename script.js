@@ -5,15 +5,15 @@ const navbar = document.getElementById('navbar');
 const logo = document.getElementById('logo');
 
 menuIcon.addEventListener('click', () => {
-  menuIcon.classList.add('hide');
-  closeIcon.classList.remove('hide');
+  menuIcon.style.display = 'none';
+  closeIcon.style.display = 'block';
   navbar.classList.add('responsive');
   logo.style.display = 'none';
 });
 
 closeIcon.addEventListener('click', () => {
-  closeIcon.classList.add('hide');
-  menuIcon.classList.remove('hide');
+  closeIcon.style.display = 'none';
+  menuIcon.style.display = 'block';
   navbar.classList.remove('responsive');
   logo.style.display = 'block';
 });
