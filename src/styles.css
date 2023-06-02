@@ -1,4 +1,6 @@
-/* Add the CSS styles here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 * {
@@ -9,7 +11,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #fffafa;
 }
 
 .navbar {
@@ -202,9 +204,9 @@ hero{
   padding: 3rem;
   font-family: 'Montserrat', sans-serif;
 }
-.crowd{
+hero img{
   max-width: 85vh;
-  max-height: 65vh;
+  max-height: 60vh;
 
 }
 .hero-text{
@@ -221,6 +223,7 @@ hero{
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
   margin: 2rem 0 2rem 0;
+  max-width: 90vh;
 }
 .hero-text button{
   font-size: 1.5rem;
@@ -233,7 +236,68 @@ hero{
   transition: all 0.3s ease;
 }
 
+.container{
+  margin: auto;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 60vh;
+  width: 100%;
+  margin: 5vh;
+}
+.container h1{
+  font-size:5vh;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin: 2rem 0 2rem 0;
+}
 
+.slider {
+  position: relative;
+  width: min(800px,90vw);
+  height: 50vmin;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.arrow-left { left:1rem; color: #C4DFDF}
+.arrow-right { right:1rem; color: #C4DFDF}
+
+.slider-track {
+    height:100%;
+    list-style-type:none;
+    display:flex;
+    transition:transform .8s
+}
+
+.slider-slide {
+    display:grid;
+    place-items:center;
+    min-width:100%;
+    height:inherit;
+    border:1px solid #fff;
+    font-weight:bold
+}
+
+.slider-icon { font-size:2.5rem; }
+
+.slider-dot {
+    background-color:#fff
+}
+.slider img{
+    width:100%;
+    height:auto
+}
+.active { width:2rem; }
 
 @media screen and (max-width: 768px) {
   .navbar.responsive {
