@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Events Hub</title>
-	<link rel="stylesheet" href="./styles.css">
-	<link rel="icon" type="image/png" href="./img/logo.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Hub</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" href="./img/logo.svg">
 </head>
 <body>
-	<header>
-		<nav>
-            <div class="navbar">
-              <a href="#">
-              <img src="./img/logo.svg" alt="logo" style="width: 2rem;">
-              </a>
-              <div class="nav-links">
-                  <a href="./index.html">
-					<button class="cta">
-						<span class="hover-underline-animation"> Home </span>
-					</button>
-                  </a>
-                  <a href="./events.html">
-					<button class="cta">
-						<span class="hover-underline-animation"> Events</span>
-					</button>
-                  </a>
-                  <a href="#">
-					<button class="cta">
-						<span class="hover-underline-animation"> Contact </span>
-					</button>
-                  </a>
-                  <a href="#">
-                  <button class="nav-button lgn-btn">
-                    Sign Up
-                    <div class="arrow-wrapper">
-                        <div class="arrow"></div>
-                    </div>
-                  </button>
-                  </a>
-              </ul>
-            </div>
-          </nav>
-		<h1 class="header-text">Welcome to our Events Website</h1>
-	  </header>
+  <header>
+    <nav>
+      <div class="navbar" id="navbar">
+        <div class="logo" id="logo">
+          <img src="./img/logo.svg" alt="logo" style="width: 2rem;">
+        </div>
+        <div class="burger">
+          <img src="./img/hamburger.svg" alt="menu" class="menu-icon" id="hamburger">
+          <img src="./img/close.svg" alt="close" class="close-icon" id="x">
+        </div>
+        <div class="nav-links">
+          <a href="./index.html">
+            <button class="cta">
+              <span class="hover-underline-animation">Home</span>
+            </button>
+          </a>
+          <a href="./events.html">
+            <button class="cta">
+              <span class="hover-underline-animation">Events</span>
+            </button>
+          </a>
+          <a href="#">
+            <button class="cta">
+              <span class="hover-underline-animation">Contact</span>
+            </button>
+          </a>
+          <a href="#">
+            <button class="nav-button lgn-btn">
+              Sign Up
+              <div class="arrow-wrapper">
+                <div class="arrow"></div>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <h1 class="header-text">Welcome to our Events Website</h1>
+  </header>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
