@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <title>Events Hub</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="icon" type="image/png" href="./img/logo.svg">
+</head>
+<body>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="./index.html" class="flex items-center">
+        <img src="./img/logo.svg" class="h-8 mr-3" alt="Events Hub Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Events Hub</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./events.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+        </li>
+        <li>
+          <a href="./contact.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+        <li>
+          <a href="./signup.html" class=" block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1 class="text-5xl font-extrabold dark:text-white text-center p-7">Create<small class="ml-2 font-semibold text-gray-500 dark:text-gray-400">a new account</small></h1>
+
+<form>
+  <div class="grid gap-6 px-8 py-3 mb-6 md:grid-cols-2">
+      <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+          <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required>
+      </div>
+      <div>
+          <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+          <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required>
+      </div>
+      
+  </div>
+  <div class="mb-6 px-8 py-3">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email address</label>
+      <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john.doe@company.com" required>
+  </div> 
+  <div class="mb-6 px-8 py-3">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+  </div>
+  <div class="mb-6 px-8 py-3">
+    <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label>
+    <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+  </div>
+  <div class="flex items-start mb-6 px-8">
+      <div class="flex items-center h-5">
+      <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required>
+      </div>
+      <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+  </div>
+
+  <div class="flex items-center justify-center">
+    <button type="submit" class="text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-base px-8 py-3 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 mr-2 mb-2">Sign Up</button>
+  </div>
+  </form>
+
+  <div class="flex items-center justify-center mt-6">
+    <span class="text-sm text-gray-600 dark:text-gray-400">Already have an account? </span>
+    <a href="./login.html" class="text-blue-600 hover:underline dark:text-blue-400">Log in</a>
+  </div>
+  <p class="m-20 text-gray-500 dark:text-gray-400 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat nemo quos accusamus perferendis exercitationem. Facere iure perspiciatis nisi consequatur sapiente impedit adipisci doloribus fugit, natus atque eius aliquam quis placeat id deserunt fugiat provident sint aut! Quae, aliquam, error sed pariatur consequuntur sint optio iure neque voluptas minima laboriosam recusandae?.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae cum atque ducimus ex quod alias porro adipisci, eos pariatur incidunt facilis non at deleniti? Aperiam laudantium qui consectetur ipsam officiis?.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sed suscipit. Aliquam in eum natus quibusdam, atque sapiente temporibus molestias!.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, blanditiis? <em class="font-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente hic quisquam illum similique libero! Ad sunt cupiditate consequuntur quae sapiente aspernatur suscipit, porro atque totam ratione impedit alias incidunt natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laudantium porro voluptate similique eius sit delectus, eaque nostrum. Molestias, in saepe! Nam voluptatum ut et, dolore blanditiis vero laudantium sed distinctio aperiam nisi id accusantium optio atque, qui iste mollitia officia corporis dignissimos illo quibusdam odio. Vitae, amet beatae? Pariatur.</p>
+
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="./index.html" class="hover:underline">EventsHub™</a>. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="./index.html" class="mr-4 hover:underline md:mr-6 ">Home</a>
+      </li>
+      <li>
+          <a href="./events.html" class="mr-4 hover:underline md:mr-6">Events</a>
+      </li>
+      <li>
+          <a href="./contact.html" class="mr-4 hover:underline md:mr-6">Contact</a>
+      </li>
+      <li>
+          <a href="./signup.html" class="hover:underline">Sign Up</a>
+      </li>
+  </ul>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+</html>
