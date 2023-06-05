@@ -1,68 +1,60 @@
 const images = document.querySelectorAll('img');
+const carousel = document.querySelector('#gallery');
 
 images.forEach(image => {
-  image.addEventListener('click', event => {
-    // Get the clicked image's source
-    const src = event.target.src;
+ image.addEventListener('click', event => {
+ // Get the clicked image's source
+ const src = event.target.src;
 
-    // Create a modal element
-    const modal = document.createElement('div');
-    modal.classList.add(
-      'fixed',
-      'top-0',
-      'left-0',
-      'w-full',
-      'h-full',
-      'bg-black',
-      'bg-opacity-50',
-      'z-10'
-    );
+ // Remove the hidden class from the carousel element to show it
+ carousel.classList.remove('hidden');
+ });
+});
+const prevButton = document.querySelector('#gallery button:first-of-type');
+const nextButton = document.querySelector('#gallery button:nth-of-type(2)');
 
-    // Create a modal content element
-    const modalContent = document.createElement('div');
-    modalContent.classList.add(
-      'absolute',
-      'top-1/2',
-      'left-1/2',
-      'transform',
-      '-translate-x-1/2',
-      '-translate-y-1/2'
-    );
+prevButton.addEventListener('click', () => {
+ // Get the current active item
+ const currentItem = document.querySelector('[data-carousel-item].block');
 
-    // Create an image element and set its source to the clicked image's source
-    const modalImage = document.createElement('img');
-    modalImage.src = src;
-    modalImage.classList.add('max-w-80', 'max-h-80');
+ // Get the previous item
+ const prevItem = currentItem.previousElementSibling;
 
-    // Append the image to the modal content
-    modalContent.appendChild(modalImage);
+ if (prevItem) {
+ // Hide the current item and show the previous item
+ currentItem.classList.add('hidden'); // Add the hidden class to the current item
+ currentItem.classList.remove('block');
+ prevItem.classList.remove('hidden'); // Remove the hidden class from the previous item
+ prevItem.classList.add('block');
+ } else {
+ // If there is no previous item, go to the last item
+ const lastItem = currentItem.parentElement.lastElementChild;
+ currentItem.classList.add('hidden'); // Add the hidden class to the current item
+ currentItem.classList.remove('block');
+ lastItem.classList.remove('hidden'); // Remove the hidden class from the last item
+ lastItem.classList.add('block');
+ }
+});
 
-    // Create a table element and add some information to it
-    const table = document.createElement('table');
-    table.classList.add('mt-4', 'text-white');
-    table.innerHTML = `
-      <tr>
-        <td>Image Name</td>
-        <td>${src.split('/').pop()}</td>
-      </tr>
-      <tr>
-        <td>Image Size</td>
-        <td>${event.target.naturalWidth} x ${event.target.naturalHeight}</td>
-      </tr>
-    `;
+nextButton.addEventListener('click', () => {
+ // Get the current active item
+ const currentItem = document.querySelector('[data-carousel-item].block');
 
-    // Append the table to the modal content
-    modalContent.appendChild(table);
+ // Get the next item
+ const nextItem = currentItem.nextElementSibling;
 
-    // Append the modal content to the modal
-    modal.appendChild(modalContent);
-
-    // Append the modal to the body
-    document.body.appendChild(modal);
-
-    // Add an event listener to the modal to close it when clicked
-    modal.addEventListener('click', () => {
-      modal.remove();
-    });
-  });
+ if (nextItem) {
+ // Hide the current item and show the next item
+ currentItem.classList.add('hidden'); // Add the hidden class to the current item
+ currentItem.classList.remove('block');
+ nextItem.classList.remove('hidden'); // Remove the hidden class from the next item
+ nextItem.classList.add('block');
+ } else {
+ // If there is no next item, go to the first item
+ const firstItem = currentItem.parentElement.firstElementChild;
+ currentItem.classList.add('hidden'); // Add the hidden class to the current item
+ currentItem.classList.remove('block');
+ firstItem.classList.remove('hidden'); // Remove the hidden class from the first item
+ firstItem.classList.add('block');
+ }
 });
