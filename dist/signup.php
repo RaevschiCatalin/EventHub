@@ -20,6 +20,7 @@ $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('$fir
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully" . "<br>";
   echo "<a href='./login.html'>Go to login page</a>";
+  header('Location: inter.html');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
